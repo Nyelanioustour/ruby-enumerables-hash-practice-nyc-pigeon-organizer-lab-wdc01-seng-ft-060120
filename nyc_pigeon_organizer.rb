@@ -1,7 +1,7 @@
 
 def nyc_pigeon_organizer(data)
   final_hash = data.each_with_object({}) do |(key, value), new_hash|
-    element.each do |inner_key, names|
+    value.each do |inner_key, names|
       names.each do |name|
         if !new_hash[name]
           new_hash[name] = {}
