@@ -1,6 +1,6 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
-  final_hash = data.each_with_obect({}) do |key, element, new_hash|
+  final_hash = data.each_with_obect({}) do |(key, element), new_hash|
     element.each do |inner_key, value|
       value.each do |name|
         if !new_hash[name]
