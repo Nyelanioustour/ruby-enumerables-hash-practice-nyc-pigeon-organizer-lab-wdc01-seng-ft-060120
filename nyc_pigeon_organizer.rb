@@ -1,10 +1,10 @@
 
 def nyc_pigeon_organizer(data)
-  final_hash = data.each_with_obect({}) do |(key, element), new_hash|
-    element.each do |inner_key, value|
-      value.each do |name|
+  final_hash = data.each_with_obect({}) do |(key, value), new_hash|
+    element.each do |inner_key, names|
+      names.each do |name|
         if !new_hash[name]
-          new_hash[name] - {}
+          new_hash[name] = {}
         end
         if !new_hash[name][key]
           new_hash[name][key] = []
